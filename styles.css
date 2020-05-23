@@ -1,0 +1,246 @@
+:root {
+  --violet: rgb(255, 24, 101);
+  --background: #191919;
+  --degreeWhithe: rgba(255, 255, 255, 0.6);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  background-color: var(--background);
+  font-family: "arial";
+}
+
+.violetText {
+  color: var(--violet);
+}
+
+.container {
+  width: 85%;
+  margin: auto;
+}
+
+.containerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5em;
+  background-color: var(--background);
+}
+
+header {
+  background-color: var(--background);
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "roboto";
+  margin: 0em 1em;
+  font-size: 1.1em;
+}
+
+header a:hover {
+  color: var(--violet);
+}
+
+header li {
+  list-style: none;
+  display: inline-block;
+}
+
+header ul ul {
+  margin-left: 1em;
+  width: 200px;
+  position: absolute;
+  background-color: #fff;
+  padding: 1em 0;
+  display: none;
+}
+header ul ul a {
+  color: black;
+  width: 100%;
+}
+header ul ul li {
+  margin: 0.5em 0;
+}
+header ul li:hover > ul {
+  display: flex;
+  flex-direction: column;
+}
+.headerMenu {
+  display: none;
+}
+.headerMenu:hover {
+  cursor: pointer;
+  transition: ease all 1s;
+  transform: scale(1.09999);
+}
+
+/* ---------------------BACKGROUND IMAGE -------------*/
+
+.backgroundImage {
+  background: url(./imgs/hero-bg.jpg);
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  height: 800px;
+}
+
+.mainInfo {
+  align-items: center;
+  color: #fff;
+  font-family: "roboto";
+}
+
+.mainInfo h4 {
+  color: var(--violet);
+  margin-bottom: 1em;
+}
+.mainInfo h1 {
+  font-size: 4rem;
+}
+.mainInfo p {
+  line-height: 1.7em;
+  font-weight: 100;
+  font-family: arial;
+}
+.buttonViolet {
+  background-color: var(--violet);
+  padding: 1rem 2rem;
+  border: none;
+  margin-top: 2rem;
+  color: #fff;
+  border-radius: 25px;
+  font-family: "roboto";
+}
+
+.buttonViolet:hover {
+  transition: ease all 0.2s;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+/* ---------------------SECTION 2  -------------*/
+
+.section2 {
+  display: flex;
+  margin-top: 5em;
+  align-items: center;
+}
+
+.section2Image img {
+  max-width: 100%;
+  height: auto;
+}
+.aboutUs {
+  margin-left: 2em;
+  max-width: 50%;
+}
+.aboutUs h1 {
+  color: #fff;
+  font-size: 3rem;
+}
+.aboutUs p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5em;
+}
+
+/* ---------------------SECTION 3  -------------*/
+
+.section3Title {
+  text-align: center;
+  margin-top: 3em;
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 3rem;
+}
+
+.section3 {
+  display: flex;
+}
+
+.caja {
+  background-color: #222222;
+  margin: 4em 1em;
+  width: 100%;
+  height: 325px;
+  text-align: center;
+  padding: 3em 1em;
+}
+.caja:hover {
+  transition: ease all 0.35s;
+  border-bottom: 4px solid var(--violet);
+}
+
+.caja h3 {
+  color: #fff;
+  margin-top: 1em;
+  font-size: 1.5rem;
+}
+.caja p {
+  color: var(--degreeWhithe);
+  margin-top: 1.5em;
+  font-size: 1.1em;
+  line-height: 1.4em;
+  font-weight: 100;
+}
+
+/* ------------------------------MEDIA QUERIES -----------------------*/
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  header nav.open {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 10em;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 100vh;
+    line-height: 2em;
+    padding: 5em 0;
+    font-size: 1.2rem;
+  }
+
+  .headerMenu {
+    display: flex;
+  }
+
+  .headerMenu button {
+    padding: 0.8em 1.5em;
+    background-color: var(--violet);
+    border: none;
+    border-radius: 25px;
+    font-family: "roboto";
+  }
+
+  .aboutUs {
+    max-width: 100%;
+    margin: 0;
+    margin-top: 2em;
+  }
+  .section2 {
+    flex-direction: column;
+  }
+  .section3 {
+    flex-direction: column;
+    margin-top: 5em;
+  }
+  .caja {
+    margin: 2em 0;
+  }
+}
